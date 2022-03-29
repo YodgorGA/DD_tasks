@@ -340,6 +340,7 @@ body a:visited {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 5px;
   }
   .aside__friends-title {
     display: -webkit-box;
