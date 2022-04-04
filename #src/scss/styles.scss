@@ -78,7 +78,7 @@ body{
 
     &__header {
         display: flex;
-        max-width: 272px;
+        width: 272px;
         height: 47px;
         font-size: 22px;
         line-height: 100%;
@@ -92,7 +92,7 @@ body{
         display: flex;
         padding-left: 24px;
         align-items: center;
-        max-width: 487px;
+        width: 487px;
         height: 42px;
         font-size: 14px;
         line-height:100%;
@@ -148,6 +148,7 @@ body{
     border-bottom: 1px dashed #E5E5E5;
     width: 100%;
     flex-wrap: nowrap;
+    justify-content: space-between;
 
         &__logo {
             margin: 11px 0px 14px 18px;
@@ -157,7 +158,7 @@ body{
             margin: 8px 0px 10px 16px;
             justify-content: center;
             align-items:center;
-            max-width: 530px;
+            width: 530px;
             height: 32px;
             font-size: 14px;
             line-height: 114%;
@@ -175,6 +176,11 @@ body{
             padding: 6px;
             font-size: 10px;
             line-height: 100%;
+        }
+        &__content{
+            display: flex;
+            flex-direction: row;
+            width: 578px;
         }
 
         &__btn {
@@ -203,6 +209,7 @@ body{
 .cards {
     display:flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     margin: 30px 0px 0px 0px;
     width: 100%;
     justify-content: space-between;
@@ -238,7 +245,7 @@ body{
             font-size: 16px;
             line-height: 131%;
             letter-spacing: -0.02em;
-            min-height: 43px;
+            height: 43px;
         }
 
         &__body {
@@ -259,7 +266,7 @@ body{
 }
 .cards> :not(:last-child)
 {
-    margin-right: 23px;
+    margin:0px 23px 0px 0px;
 }
 .card-info {
     display: flex;
@@ -470,7 +477,7 @@ width: 140px;
         align-items:center;
         height: 73px;
         &__body {
-            max-width: 363px;
+            width: 363px;
             margin: 0px 0px 0px 18px;
             height: 48px;
             
@@ -493,7 +500,7 @@ width: 140px;
         margin: 20px 0px 0px 0px;
         &> :not(:last-child)
         {
-            margin-right: 25px;
+            margin:0px 25px 0px 0px;
         }
     }
     .card-item {
@@ -536,8 +543,7 @@ width: 140px;
 }
 
 
-@media (max-width:921px){
-    
+@media (max-width:991px){
     .top-content {
         display: flex;
         flex-direction: column-reverse;
@@ -594,10 +600,226 @@ width: 140px;
     }
 }
 
-@media (max-width:767px){
+@media screen and (max-width:767px){
     
+        .aside {
+            padding: 0px;
+            width: 545px;
+
+            &__menu{
+                margin-left: 0px;
+            }
+            &__container{
+                margin:10px 0px 0px 0px;
+            }
+        }
+        .wrapper{
+            width: 670px;
+        }
+
+        .main{
+            &__container{
+                width: 100%;
+            }
+        }
+
+        .menu-item{
+            width:85px;
+            &__logo{
+                display: none;
+            }
+            &__body{
+                margin: 0px 0px 0px 7px;
+            }
+            
+        }
+        .banner
+        {
+            width: 100%;
+            &__img{
+                width: 100%;
+                height: 353px;
+                object-fit: cover;
+            }
+            &__text{
+                transform: translateY(-89px);
+                width: 545px;
+                
+            }
+            &__header{
+                background-color:#ffffff;
+                width: inherit;
+                opacity: 0.6;
+                justify-content: start;
+                padding: 0px 0px 0px 10px;
+            }
+            &__description{
+                width: inherit;
+            }
+        }
+        .tabs{
+            display: none;
+        }
+        .subscribe-box{
+            margin-top:-60px;
+            display: flex;
+            flex-direction: column;
+            max-width: 545px;
+            padding: 10px 0px;
+            &__content{
+                display: flex;
+                flex-direction: row;
+                height: 32px;
+                width:522px;
+            }
+            &__logo{
+                margin:0px;
+            }
+            &__body{
+                width:474px;
+                text-align: justify
+            }
+            &__input
+            {
+                width: 400px;
+                margin: 0px 0px 0px 12px;
+            }
+            &__btn{
+                margin-right: 0px;
+            }
+        }
+
+        .cards{
+            display: flex;
+            width: 545px;
+            flex-wrap: wrap;
+            flex:0 1 25%;
+            &>:not(:last-child){
+                margin: 0px;
+            }
+        }
+        .card-item{
+            width:256px;
+            &__title{
+                height: 20px;
+            }
+            &__card-info{
+                margin:0px 0px 5px 0px;
+            }
+        }
+        .subscribe-form{
+            width: 545px;
+            justify-content: space-between;
+            align-items:center;
+        }
+        .top-content{
+            &__container{
+                max-width: 545px;
+            }
+        }
+        .main
+        {
+            
+            &__container 
+            {
+                margin-top: 20px;
+            }
+        }
+
+        .footer{
+            &__container{
+                width: 550px;
+            }
+            
+        }
+
+        
 }
 
-@media (max-width:479px){
+@media screen and (max-width:479px){
+    .wrapper{
+        width: 480px;
+    }
+    .top-content{
+        &__container{
+            width: 480px;
+        }
+    }
+    .footer{
+        &__container{
+            width: 429px;
+        }
+    }
+
+    .aside{
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+        &__menu{
+            justify-content: center;
+        }
+        &__container{
+            width: 100%;
+        }
+    }
     
+    .banner{
+        &__text{
+            width: 100%;
+        }
+    }
+    .subscribe-box{
+        width: 100%;
+        height: 128px;
+        &__content{
+            width: 414px;
+            height: 48px;
+            
+        }
+        &__body{
+            width: 366px;
+            height: 100%;
+        }
+        &__logo{
+            padding: 0px 0px 0px 0px;
+        }
+        &__btn{
+            margin: 0px 0px 0px 10px;
+        }
+        &__input{
+            margin:0px;
+        }
+    }
+    .subscribe-form{
+        width: 414px;
+        height: 50%;
+    }
+    .cards{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-item{
+        width: 375px;
+
+        &__img-container{
+            width: 375px;
+            height: 200px;
+        }
+        &__img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &__title{
+            font-size: 22px;
+            line-height: 100%;
+            letter-spacing: -0.02em;
+        }
+        &__body{
+            font-size: 18px;
+            line-height: 111%;
+            letter-spacing: -0.02em;
+        }
+    }
 }

@@ -107,7 +107,7 @@ function css()
 
 function js()
 {
-    return  gulp.src('#src/js/script.js')
+    return  gulp.src('#src/js/script.js',{allowEmpty:true})
     .pipe(fileinclude())
     .pipe( gulp.dest(path.build.js))
     .pipe(browsersync.stream());
