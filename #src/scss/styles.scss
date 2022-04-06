@@ -101,6 +101,33 @@ body{
         background-color:#000000;
 
     }
+    &__carousel {
+
+    }
+}
+
+.main-carousel {
+
+    &__hider {}
+
+    &__list {}
+
+    &__element {}
+
+    &__img {
+        width: 100%;
+    }
+
+    &__arrow {
+
+        &_left {}
+
+        &_right {}
+    }
+
+    &__dots {}
+
+    &__dot {}
 }
 
 .tabs {
@@ -108,6 +135,8 @@ body{
     flex-direction: row;
     margin-top: -89px;
     width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
     .tab-item {
         width: 224px;
         height: 85px;
@@ -456,18 +485,24 @@ width: 140px;
 
 
 @media (max-width:1076px){
+    .top-content{
+        &__container{
+            width: 896px;
+        }
+    }
+    
     .main {
         display: flex;
         flex-direction: column;
             &__container {
-                width: 712px;
+                width: calc(100% - 184px);
             }
     }
 
     .banner {
     
         &__img {
-            max-width: 712px;
+            width: 100%;
         }
     }
 
@@ -549,7 +584,9 @@ width: 140px;
         flex-direction: column-reverse;
         justify-content: space-between;
         margin-top: 0px;
-            &__container {}
+            &__container {
+                width:710px;
+            }
     }
 
     .aside {
@@ -587,8 +624,18 @@ width: 140px;
     }
     .main{
         &__container
-        {
+        {   
+            width: 100%;
             margin-top: 30px;
+        }
+    }
+
+    .banner{
+        &__container{
+            width: 100%;
+        }
+        &__img{
+            width: 100%;
         }
     }
 
@@ -607,7 +654,7 @@ width: 140px;
             width: 545px;
 
             &__menu{
-                margin-left: 0px;
+                margin-left: 15px;
             }
             &__container{
                 margin:10px 0px 0px 0px;
@@ -629,7 +676,6 @@ width: 140px;
                 display: none;
             }
             &__body{
-                margin: 0px 0px 0px 7px;
             }
             
         }
@@ -643,7 +689,7 @@ width: 140px;
             }
             &__text{
                 transform: translateY(-89px);
-                width: 545px;
+                width: inherit;
                 
             }
             &__header{
@@ -666,6 +712,7 @@ width: 140px;
             flex-direction: column;
             max-width: 545px;
             padding: 10px 0px;
+            height: 93px;
             &__content{
                 display: flex;
                 flex-direction: row;
@@ -683,6 +730,7 @@ width: 140px;
             {
                 width: 400px;
                 margin: 0px 0px 0px 12px;
+                padding-bottom: 15px;
             }
             &__btn{
                 margin-right: 0px;
