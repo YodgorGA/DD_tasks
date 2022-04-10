@@ -11,6 +11,7 @@ const gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del'),
     fileinclude = require('gulp-file-include');
+    sourcemap = require('gulp-sourcemaps');
 
 
 let path={
@@ -108,8 +109,10 @@ function css()
 function js()
 {
     return  gulp.src('#src/js/script.js',{allowEmpty:true})
-    .pipe(fileinclude())
-    .pipe( gulp.dest(path.build.js))
+    .pipe(fileinclude({
+        prefix: '@@'
+    }))
+    .pipe(gulp.dest(path.build.js))
     .pipe(browsersync.stream());
 }
 

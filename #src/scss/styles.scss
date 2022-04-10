@@ -108,26 +108,32 @@ body{
 
 .main-carousel {
 
-    &__hider {}
+    &__hider {
+        max-width: 897px;
+        max-height: 445px;
+    }
 
-    &__list {}
+    &__list {
+        max-width: inherit;
+        max-height: inherit;
+    }
 
-    &__element {}
+    &__element {
+        max-width: inherit;
+        max-height: inherit;
+        overflow: hidden;
+        justify-content: center;
+    }
 
     &__img {
-        width: 100%;
+        max-width: inherit;
+        object-fit: none;
+        opacity: 1;
     }
 
-    &__arrow {
-
-        &_left {}
-
-        &_right {}
+    &__arrows {
+        display: none;
     }
-
-    &__dots {}
-
-    &__dot {}
 }
 
 .tabs {
@@ -767,7 +773,6 @@ width: 140px;
         }
         .main
         {
-            
             &__container 
             {
                 margin-top: 20px;
@@ -781,6 +786,29 @@ width: 140px;
             
         }
 
+        .main-carousel{
+            &__hider{
+                position: relative;
+            }
+            &__arrows
+            {
+
+            }
+        }
+        .slider-arrows
+        {   
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            transform: translateY(calc(-445px/2));
+            &__left{
+            }
+            &__rigth{
+
+            }
+        }
+            
+
         
 }
 
@@ -791,11 +819,6 @@ width: 140px;
     .top-content{
         &__container{
             width: 480px;
-        }
-    }
-    .footer{
-        &__container{
-            width: 429px;
         }
     }
 
